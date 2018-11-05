@@ -1,0 +1,74 @@
+.contenedor-form{
+    width: 70%;
+    padding-top: 20%;
+    margin: 0 auto;
+    height: 100%;
+    margin-bottom: 42%;
+    a{
+        margin-left:15%;
+        font-weight: bold;
+    }
+}
+.col-card-1{
+    display: inline-flex;
+    margin-left: 10%;
+    width: 100%;
+    text-align: center;
+    margin-right: 10%;
+        p{
+            margin-left: 5%;
+            font-weight: bold;
+        }
+        label{
+            padding-left: 10%;
+            width: 45%;
+        }
+}
+.row{
+    height: 30%;
+}
+
+.card-lista{
+    width: 22%;
+    margin-left: 2%;
+    margin-top: 2%;
+    border: 3px;
+    border-color: $negro;
+    box-shadow: 6px 10px 14px 6px $negro;
+    transition: 0.3s;
+    border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+    border: 1px solid $negro;
+    float: left;
+    background-color: #ffffff;
+}
+.card-lista-report{
+    width: 75%;
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: 15%;
+    border: 3px;
+    border-color: $negro;
+    box-shadow: 6px 10px 14px 6px $negro;
+    transition: 0.3s;
+    border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+    border: 1px solid $negro;
+    float: left;
+    background-color: #ffffff;
+    text-align: center;
+    padding-bottom: 2%;
+    .form-group{
+        margin: 1% 5% 1% 5% ;
+    }
+}
+
+.form-date{
+    width: 100%; 
+    box-shadow: 0cm;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+}

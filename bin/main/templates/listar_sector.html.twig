@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block contenido %}
+<div class="contenedor-form">
+
+
+	{% for s in sectores %}
+	<div class="card-lista">
+		<div class="row">
+
+			<div class="col-card-1">
+				<label for="txtNmbre">Nombre</label>
+				<p id="txtNmbre">
+					{{ s.getNombre() }}
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-card-1">
+				<label for="txtDesc">Descripcion</label>
+				<p id="txtDesc">
+					{{ s.getDesc() }}
+				</p>
+			</div>
+		</div>
+	<div class="row"> 
+	<a href="/sector/modificar?id={{ s.getId() }}">Modificar</a> 
+	<a href="/sector/eliminar?id={{ s.getId() }}">Eliminar</a>
+</div>
+	</div>
+
+{% endfor %}
+
+{{ mensaje }}
+</div>
+
+{% endblock %}

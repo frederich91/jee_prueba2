@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block contenido %}
+<div class="contenedor-form">
+<div class="card-lista-report">
+<h4>Actualizar Animal</h4>
+	<form action="/animal/editar" method="POST">
+	<input type="hidden" name="txtCodigo" id="txtCodigo" value="{{ animal.getCodigo() }}"/>
+		<div class="form-group">
+			<label for="txtNombre">Nombre</label> <input type="text"
+				class="form-control" id="txtNombre" name="txtNombre"
+				placeholder="Ingrese nombre" value="{{ animal.getNombre() }}"
+				required>
+		</div>
+		<div class="form-group">
+			<label for="txtPeso">Peso</label> <input type="number"
+				class="form-control" id="txtPeso" name="txtPeso" min=0 step="0.01"
+				placeholder="Ingrese Peso" value="{{ animal.getPeso() }}" required>
+		</div>
+		<div class="form-group">
+			<label for="cboGenero">Genero</label> <select class="form-control"
+				id="cboGenero" name="cboGenero" required>
+				<option value="0">Seleccione Genero</option>
+				<option {{ ('masculino' != animal.getGenero())?'':'selected' }}
+					value="masculino">Masculino</option>
+				<option {{ ('femenino' != animal.getGenero())?'':'selected' }}
+					value="femenino">Femenino</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label for="cboTipo">Tipo</label> <select class="form-control"
+				id="cboTipo" name="cboTipo" placeholder="Seleccione Tipo" required>
+				<option value="0">Seleccione Tipo</option>
+				{% for tipo in tipos %}
+				<option {{ (tipo.getId() == animal.getTipo().getId())?'selected':'' }}
+					value="{{ tipo.getId()}}">{{ tipo.getDesc() }}</option>
+				{% endfor %}
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label for="cboSector">Sector</label> <select class="form-control"
+				id="cboSector" name="cboSector" placeholder="Seleccione Sector"
+				required>
+				<option value="0">Seleccione Sector</option>
+				{% for sector in sectores %}
+				<option
+					{{ (sector.getId() == animal.getSector().getId())?'selected':'' }}
+					value="{{ sector.getId()}}">{{ sector.getDesc() }}</option>
+				{% endfor %}
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="txtFchIngreso">Fecha Ingreso</label> <input type="Date" class="form-date"
+				data-date-format="dd/mm/yyyy" id="txtFchIngreso"
+				name="txtFchIngreso" value="{{ animal.getFchIngreso() }}" required>
+		</div>
+
+		<div class="form-group"> 
+			<label for="txtFchNac">Fecha Nacimiento</label> <input type="Date" class="form-date"
+				data-date-format="dd/mm/yyyy" id="txtFchNac" name="txtFchNac"
+				value="{{ animal.getFchNac() }}">
+		</div>
+		<div class="form-group">
+			<label for="txtFchMuerte">Fecha Muerte</label> <input type="Date" class="form-date"
+				id="txtFchMuerte" name="txtFchMuerte"
+				value="{{ animal.getFchMuerte() }}">
+		</div>
+		<input class="input-button" type="submit" value="Guardar" /> <input
+			class="input-button-reset" type="reset" value="Limpiar" />
+	</form>
+	<h4 class="alert">{{ mensaje }}</h4>
+	</div>
+</div>
+
+{% endblock %}

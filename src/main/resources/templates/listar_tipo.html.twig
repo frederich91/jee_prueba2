@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block contenido %}
+<div class="contenedor-form">
+
+
+	{% for t in tipos %}
+	<div class="card-lista">
+		<div class="row">
+
+			<div class="col-card-1">
+				<label for="txtNmbre">Nombre</label>
+				<p id="txtNmbre">
+					{{ t.getNombre() }}
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-card-1">
+				<label for="txtDesc">Descripcion</label>
+				<p id="txtDesc">
+					{{ t.getDesc() }}
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<a href="/tipo/modificar?id={{ t.getId() }}">Modificar</a> 
+			<a href="/tipo/eliminar?id={{ t.getId() }}">Eliminar</a>
+		</div>
+	</div>
+	{% endfor %}
+
+	{{ mensaje }}
+</div>
+
+{% endblock %}

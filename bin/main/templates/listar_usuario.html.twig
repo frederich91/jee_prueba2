@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block contenido %}
+<div class="contenedor-form">
+
+	{% for u in usuarios %}
+	<div class="card-lista">
+		<div class="row">
+
+			<div class="col-card-1">
+				<label for="txtNmbre">Nombre</label>
+				<p id="txtNmbre">
+					{{ u.getNombre() }}
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-card-1">
+				<label for="txtDesc">Contraseña</label>
+				<p id="txtDesc">
+					{{ u.getPassword() }}
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-card-1">
+				<label for="txtUser">Nombre Usuario</label>
+				<p id="txtUser">
+					{{ u.getUsername() }}
+				</p>
+			</div>
+		</div>
+	<div class="row"> 
+	<a href="/usuario/modificar?id={{ u.getId() }}">Modificar</a> 
+	<a href="/usuario/eliminar?id={{ u.getId() }}">Eliminar</a>
+</div>
+	</div>
+
+	{% endfor %}
+
+	{{ mensaje }}
+</div>
+
+{% endblock %}
