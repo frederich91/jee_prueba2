@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+
+{% block contenido %}
+<div class="contenedor-form">
+<form action="/reporte/fechas" method="POST">
+    <p>Seleccione fechas a filtrar</p>
+    <div class="form-group">
+			<label for="txtFchInicio">Fecha Inicio</label> <input type="Date" class="form-date"
+				data-date-format="dd/mm/yyyy" id="txtFchInicio"
+				name="txtFchInicio" required>
+	</div>
+	<div class="form-group">
+			<label for="txtFchFin">Fecha Fin</label> <input type="Date" class="form-date"
+				data-date-format="dd/mm/yyyy" id="txtFchFin"
+				name="txtFchFin" required>
+	</div>
+    <input class="input-button" type="submit" value="Buscar" /> 
+</form>
+{% if animales %}
+    <div class="card-lista-report">
+    	<h4>Reporte Animales por rango Fechas</h4>
+    	<table class="table">
+    		<tr>
+    			<th>Nombre</th>
+    			<th>Peso</th>
+    			<th>Fecha nacimiento</th>
+    			<th>Fecha de ingreso</th>
+    			<th>Fecha de muerte</th>
+    			<th>Genero</th>
+    			<th>Tipo</th>
+    			<th>Sector</th>
+    
+    		</tr>
+    
+    		{% for a in animales %}
+    
+    		<tr>
+    			<td>{{ a.getNombre() }}</td>
+    			<td>{{ a.getPeso()  }}</td>
+    			<td>{{ a.getFchNac() | date('dd-MM-yyyy') }}</td>
+    			<td>{{ a.getFchIngreso() | date('dd-MM-yyyy') }}</td>
+    			<td>{{ a.getFchMuerte() | date('dd-MM-yyyy') }}</td>
+    			<td>{{ a.getPeso() }}</td>
+    			<td>{{ a.getTipo().getDesc() }}</td>
+    			<td>{{ a.getSector().getDesc() }}</td>
+    		</tr>
+    
+    		{% endfor %}
+    
+    
+    	</table>
+   {% endif %}
+    	<h4>
+    		{{ mensaje }}
+    	</h4>
+    </div>
+</div>
+{% endblock contenido %}

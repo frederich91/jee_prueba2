@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block contenido %}
+<div class="contenedor-form">
+<div class="card-lista-report">
+<h4>Agregar Sector</h4>
+	<form action="/sector/almacenar" method="POST">
+		<div class="form-group">
+			<label for="txtNombre">Nombre</label> 
+			<input type="text" class="form-control" id="txtNombre" name="txtNombre"
+				placeholder="Ingrese nombre" required>
+		</div>
+		<div class="form-group">
+			<label for="txtDesc">Descripcion</label> 
+			<input type="text" class="form-control" id="txtDesc" name="txtDesc"
+				placeholder="Ingrese descripcion" required>
+		</div>
+
+		<input class="input-button" type="submit" value="Guardar" />
+		<input class="input-button-reset" type="reset" value="Limpiar" />
+	</form>
+<h4 class="alert">{{ mensaje }}</h4>
+	</div>
+</div>
+
+{% endblock %}

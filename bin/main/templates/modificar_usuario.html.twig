@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block contenido %}
+<div class="contenedor-form">
+<div class="card-lista-report">
+<h4>Actualizar Usuario</h4>
+	<form action="/usuario/editar" method="POST">
+	<input type="hidden" name="txtId" id="txtId" value="{{ usuario.getId() }}"/>
+		<div class="form-group">
+			<label for="txtNombre">Nombre</label> <input type="text"
+				class="form-control" id="txtNombre" name="txtNombre"
+				placeholder="Ingrese nombre" value="{{ usuario.getNombre() }}" required>
+		</div>
+		<div class="form-group">
+			<label for="txtPass">Contraseña</label> <input type="text"
+				class="form-control" id="txtPass" name="txtPass"
+				placeholder="Ingrese contraseña" value="{{ usuario.getPassword() }}" required>
+		</div>
+		<div class="form-group">
+			<label for="txtUsername">Usuario</label> <input type="text"
+				class="form-control" id="txtUsername" name="txtUsername"
+				placeholder="Ingrese usuario" value="{{ usuario.getUsername() }}" required>
+		</div>
+
+		<input class="input-button" type="submit" value="Guardar" /> <input
+			class="input-button-reset" type="reset" value="Limpiar" />
+	</form>
+	<h4 class="alert">
+	{{ mensaje }}
+	</h4>
+	</div>
+</div>
+
+{% endblock %}

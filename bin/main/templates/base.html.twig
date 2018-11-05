@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- <title>{{ title }}</title> -->
+<title>Zoo Concepcion</title>
+<link href="https://fonts.googleapis.com/css?family=Krub"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/css/baseStyle.css">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<nav>
+
+		<div class="btn-nav">
+			<div class="usuario-icono">
+				<img src="/img/usuario-mapache.png" alt="usuario">
+				<p>{{ username }} <br />
+				<a class ="logout-class" href="/logout"> Cerrar Sesion</a>
+				</p>
+			</div>
+			<div class="dropdown">
+				<button class=" dropdown-toggle" type="button" id="btnAnimal"
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Animal</button>
+				<div class="dropdown-menu menu-transparente"
+					aria-labelledby="btnAnimal">
+					<a class="dropdown-item" href="/animal/listar">Listar</a> <a
+						class="dropdown-item" href="/animal/agregar">Crear</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class=" dropdown-toggle" type="button" id="btnTipo"
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Tipo</button>
+				<div class="dropdown-menu menu-transparente"
+					aria-labelledby="btnTipo">
+					<a class="dropdown-item" href="/tipo/listar">Listar</a> <a
+						class="dropdown-item" href="/tipo/agregar">Crear</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class=" dropdown-toggle" type="button" id="btnSector"
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Sector</button>
+				<div class="dropdown-menu menu-transparente"
+					aria-labelledby="btnSector">
+					<a class="dropdown-item" href="/sector/listar">Listar</a> <a
+						class="dropdown-item" href="/sector/agregar">Crear</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class=" dropdown-toggle" type="button" id="btnUsuario"
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Usuarios</button>
+				<div class="dropdown-menu menu-transparente"
+					aria-labelledby="btnUsuario">
+					<a class="dropdown-item" href="/usuario/listar">Listar</a> <a
+						class="dropdown-item" href="/usuario/agregar">Crear</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class=" dropdown-toggle" type="button" id="btnReporte"
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Reporte</button>
+				<div class="dropdown-menu menu-transparente"
+					aria-labelledby="btnReporte">
+					<a class="dropdown-item" href="/reporte/tipo">Reporte por tipo</a> <a
+						class="dropdown-item" href="/reporte/fechas">Reporte por fechas</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<main>
+		{% block contenido %}
+		{% endblock %}
+	</main>
+	<footer Class="footer navbar-fixed-bottom">
+		<div class="footer-colums">
+			<p>
+				e-mail: <strong>zoo.concepcion@gmail.cl</strong>
+			</p>
+		</div>
+		<div>
+			<h3>ZOO Concepción</h3>
+			<p>
+				AV. siempre viva #1004 <br /> Telefono: <strong> 23456789</strong>
+			</p>
+		</div>
+	</footer>
+</body>
+</html>

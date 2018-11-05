@@ -1,0 +1,96 @@
+@import "variables";
+@mixin login-card($paddings:35%) {
+    max-width: 100%;
+    padding-left:$paddings;
+    padding-right: $paddings;
+    padding-top: 13%;
+}
+
+
+body{
+    background: url("https://www.todopaisajes.com/Imagenes/selva-frondosa.jpg") no-repeat fixed;
+}
+.login-card{
+    @media only screen and (max-width: $xs){
+        @include login-card(10%);
+    }
+    @media only screen and (max-width: $sm){
+        @include login-card(15%);
+    }
+    @media only screen and (max-width: $med){
+        @include login-card(25%);
+    }
+    @media only screen and (max-width: $lg){
+        @include login-card(25%);
+    }
+
+    @include login-card();
+    /* @include responsive( 400px ) {
+        display: inline;
+        width: 100%;
+        padding-left: 35%;
+        padding-right: 35%;
+        padding-top: 15%;
+    }*/
+    h1{
+        text-align: center;
+        padding-top: 2%;
+        padding-bottom: 3%;
+        color: $blanco;
+        font-weight: bold;
+    }
+    form{
+        input{
+            border-radius: 7px 7px 7px 7px;
+            -moz-border-radius: 7px 7px 7px 7px;
+            -webkit-border-radius: 7px 7px 7px 7px;
+            border: 1px solid $blanco;
+            margin-bottom: 4%;
+            box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.733);
+            font-weight: bold;
+        }
+        .input-button{
+            width: 30%;
+            height: 2.4em;
+            margin-left: 35%;
+            background-color: $blue;
+            color: $blanco;
+        }
+        .input-text{
+            width: 90%;
+            height: 2.4em;
+            margin-left: 5%;
+            margin-right: 5%;
+            background: whitesmoke;
+            
+        }
+    }
+    .card-custom{
+        width: 100%;
+        border: 3px;
+        border-color: $blanco;
+        box-shadow: 6px 10px 14px 6px rgb(0, 0, 0);
+        transition: 0.3s;
+        padding:5%;
+        margin-top: 5%;
+        background-color: white;
+        border-radius: 15px 15px 15px 15px;
+        -moz-border-radius: 15px 15px 15px 15px;
+        -webkit-border-radius: 15px 15px 15px 15px;
+        border: 4px solid $blanco;
+       // background-color: #d4e0cf;
+        background: transparent;
+    }
+}
+.card-custom{
+        width: 100%;
+        border: 3px;
+        border-color: black;
+        box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        padding:5%;
+        margin-top: 5%;
+        border-radius: 15px 15px 15px 15px;
+        -moz-border-radius: 15px 15px 15px 15px;
+        -webkit-border-radius: 15px 15px 15px 15px;
+}

@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block contenido %}
+<div class="contenedor-form">
+
+
+	{% for an in animales %}
+	<div class="card-lista">
+		<div class="row">
+
+			<div class="col-card-1">
+				<label for="txtNmbre">Nombre</label>
+				<p id="txtNmbre">
+					{{ an.getNombre() }}
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-card-1">
+				<label for="txtDesc">Peso</label>
+				<p id="txtDesc">
+					{{ an.getPeso() }}
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-card-1">
+				<label for="txtUser">Fecha Nacimiento</label>
+				<p id="txtUser">
+					{{ an.getFchNac() }}
+				</p>
+			</div>
+		</div>
+		
+				<div class="row">
+
+			<div class="col-card-1">
+				<label for="txtNmbre">Fecha Ingreso</label>
+				<p id="txtNmbre">
+					{{ an.getFchIngreso() }}
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-card-1">
+				<label for="txtDesc">Fecha Muerte</label>
+				<p id="txtDesc">
+					{{ an.getFchMuerte() }}
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-card-1">
+				<label for="txtUser">Genero</label>
+				<p id="txtUser">
+					{{ an.getGenero() }}
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-card-1">
+				<label for="txtDesc">Sector</label>
+				<p id="txtDesc">
+					{{ an.getSector().getDesc() }}
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-card-1">
+				<label for="txtUser">Tipo</label>
+				<p id="txtUser">
+					{{ an.getTipo().getDesc() }}
+				</p>
+			</div>
+		</div>
+	<div class="row"> 
+    	<a href="/animal/modificar?id={{ an.getCodigo() }}">Modificar</a> 
+    	<a href="/animal/eliminar?id={{ an.getCodigo() }}">Eliminar</a>
+</div>
+	</div>
+    
+	{% endfor %}
+
+	{{ mensaje }}
+</div>
+
+{% endblock %}
