@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block contenido %}
+<div class="contenedor-form">
+<div class="card-lista-report">
+<h4>Actualizar Tipo</h4>
+	<form action="/tipo/editar" method="POST">
+	<input type="hidden" name="txtId" id="txtId" value="{{ tipo.getId() }}"/>
+		<div class="form-group">
+			<label for="txtNombre">Nombre</label> <input
+				type="text" class="form-control" id="txtNombre" name="txtNombre"
+				placeholder="Ingrese nombre" value="{{ tipo.getNombre() }}" required>
+		</div>
+		<div class="form-group">
+			<label for="txtDesc">Descripcion</label> <input
+				type="text" class="form-control" id="txtDesc" name="txtDesc"
+				placeholder="Ingrese descripcion" value="{{ tipo.getDesc() }}" required>
+		</div>
+
+
+		<input class="input-button" type="submit" value="Guardar" />
+		<input class="input-button-reset" type="reset" value="Limpiar" />
+	</form>
+<h4 class="alert">{{ mensaje }}</h4>
+	</div>
+</div>
+
+{% endblock %}

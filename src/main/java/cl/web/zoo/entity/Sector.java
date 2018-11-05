@@ -1,5 +1,5 @@
 package cl.web.zoo.entity;
-// Generated 27-10-2018 3:13:47 by Hibernate Tools 4.3.5.Final
+// Generated 04-11-2018 13:08:58 by Hibernate Tools 5.2.11.Final
 
 
 import java.util.HashSet;
@@ -42,8 +42,6 @@ public class Sector implements java.io.Serializable {
 
   @Id
   @GeneratedValue(strategy = IDENTITY)
-
-
   @Column(name = "id", unique = true, nullable = false)
   public Integer getId() {
     return this.id;

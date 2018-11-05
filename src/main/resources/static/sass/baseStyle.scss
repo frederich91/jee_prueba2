@@ -1,0 +1,230 @@
+@import "variables";
+@import "form_animal";
+
+@mixin footer-div($margin:40%, $width:25%, $float:left) {
+    float: $float;
+    margin-left:$margin;
+    width: $width;
+}
+
+@mixin nav-buttom ( $pleft, $ptop:1%) {
+    position: relative;
+    padding-left: $pleft;
+    padding-top: $ptop;
+}
+
+.input-button{
+    width: 20%;
+    height: 2.4em;
+    //margin-left: 35%;
+    background-color: $blue;
+    color: $blanco;
+    box-shadow: 0cm;
+    border-radius: 14px 14px 14px 14px;
+    -moz-border-radius: 14px 14px 14px 14px;
+    -webkit-border-radius: 14px 14px 14px 14px;
+}
+
+.input-button-reset{
+    width: 20%;
+    height: 2.4em;
+    //margin-left: 35%;
+    background-color: $rojo;
+    color: $blanco;
+    box-shadow: 0cm;
+    border-radius: 14px 14px 14px 14px;
+    -moz-border-radius: 14px 14px 14px 14px;
+    -webkit-border-radius: 14px 14px 14px 14px;
+}
+footer{
+    background: url("../img/fondo-tronco.jpg") fixed;
+    color: #ffffff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 15%;
+    position: fixed;
+    margin-top: 1%;
+    display: inline-block;
+
+    div{
+        @media only screen and (max-width: $xs){
+            @include footer-div(10%,55%,right);
+        }
+        @media only screen and (max-width: $sm){
+            @include footer-div(15%,25%,right);
+        }
+        @media only screen and (max-width: $med){
+            @include footer-div(25%,25%,right);
+        }
+        @media only screen and (max-width: $lg){
+            @include footer-div(25%,55%,right);
+            h3{
+                font-size: 95%;
+                font-weight: bold;
+            }
+            p{
+                font-size:80%;
+                font-weight: bold;
+                margin-left: 8%;
+            }
+        }
+        @media only screen and (max-width: $xl){
+            @include footer-div(25%,40%,right);
+            h3{
+                font-weight: bold;
+            }
+            p{
+                margin-left: 8%;
+                font-weight: bold;
+            }
+        }
+        @media only screen and (max-width: 2000px){
+            @include footer-div(25%,40%,right);
+            h3{
+                font-weight: bold;
+            }
+            p{
+                margin-left: 5%;
+                font-weight: bold;
+            }
+        }
+    }
+    .footer-colums{
+        @media only screen and (max-width: $xs){
+            @include footer-div(0%);
+            p{
+                margin-top: 5%;
+            }
+        }
+        @media only screen and (max-width: $sm){
+            @include footer-div(0%);
+            p{
+                margin-top: 5%;
+            }
+        }
+        @media only screen and (max-width: $med){
+            @include footer-div(0%);
+            p{
+                margin-top: 5%;
+            }
+        }
+        @media only screen and (max-width: $lg){
+            @include footer-div(0%,20%);
+            font-size: 90%;
+            p{
+                margin-top: 5%;
+            }
+        }
+        @media only screen and (max-width: $xl){
+            @include footer-div(0%,35%);
+            p{
+                margin-top: 5%;
+            }
+        }
+        @media only screen and (max-width: 2000px){
+            @include footer-div(5%,25%);
+            p{
+                margin-top: 1%;
+            }
+        }
+    }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: url("../img/fondo-hojas.jpg")no-repeat fixed;
+    height: 30%;
+
+    .usuario-icono{
+        width: 85%;
+        height: 63%;
+        right: 0;
+        img{
+            height: 20%;
+            vertical-align: middle;
+            border-style: none;
+            width: 51%;
+
+        }
+        p{
+            font-weight: bolder;
+            width: 62%;
+            float: right;
+            margin-top: 5%;
+            margin-right: -14%;
+            font-size: 150%;
+        }
+    }
+    .btn-nav{
+        @media only screen and (min-width: $xs){
+            @include nav-buttom(40%);
+        }
+        @media only screen and (min-width: $sm){
+            @include nav-buttom(50%);
+        }
+        @media only screen and (min-width: $med){
+            @include nav-buttom(60%);
+        }
+        
+        @media only screen and (min-width: $lg){
+            @include nav-buttom(60%);
+        }
+        @media only screen and (min-width: $xl){
+            @include nav-buttom(65%);
+        }
+        .dropdown{
+            float: left;
+            margin-left: 2%;
+        }
+        
+    }
+    button{
+        background-color: transparent;
+        color: $negro;
+        font-weight: bold;
+        box-shadow: 0cm;
+        border-radius: 15px 15px 15px 15px;
+        -moz-border-radius: 15px 15px 15px 15px;
+        -webkit-border-radius: 15px 15px 15px 15px;
+        align-content: flex-end;
+
+    }
+    .menu-transparente{
+        background-color: transparent;
+        color: #ffffff;
+        font-weight: bold;
+        a{
+            color: #000000;
+            font-weight: bold;
+
+        }
+    }
+ }
+body{
+    // background-color: aqua;
+    background: url("../img/fondo-contenido.jpg") fixed;
+    height: 100%;
+}
+.alert{
+    color: $rojo;
+    font-weight: bold;
+    font-size: 90%;
+}
+.login-nav{
+    right: 0;
+    margin-top: 15%;
+    margin-right: 5%;
+    font-size: 115%;
+    font-weight: bolder;
+    color: $blanco;
+    float: right;
+}
+.logout-class{
+    font-size: 75%;
+    color: $blanco;
+
+}

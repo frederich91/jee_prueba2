@@ -33,8 +33,8 @@ public class SecurityConffiguration extends WebSecurityConfigurerAdapter {
       http.csrf().disable();
 
       http.authorizeRequests()
-//      .antMatchers("/java/**")
-//      .authenticated()
+      .antMatchers("/java/**")
+      .authenticated()
       .antMatchers("/error/**")
       .permitAll()
       .antMatchers("/static/**")
@@ -44,7 +44,7 @@ public class SecurityConffiguration extends WebSecurityConfigurerAdapter {
       .formLogin()
       .defaultSuccessUrl("/")
       .loginPage("/login")
-      .permitAll()
+      .permitAll().defaultSuccessUrl("/animal/listar")
       .and()
       .logout()
       .permitAll()

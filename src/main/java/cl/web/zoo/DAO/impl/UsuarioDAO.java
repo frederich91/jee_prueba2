@@ -2,11 +2,14 @@ package cl.web.zoo.DAO.impl;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Repository;
 import cl.web.zoo.DAO.IUsuario;
 import cl.web.zoo.entity.Usuario;
 
+@Repository
+@Transactional
 public class UsuarioDAO {
   
   @PersistenceContext

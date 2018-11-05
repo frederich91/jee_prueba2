@@ -1,0 +1,351 @@
+.contenedor-form {
+  width: 70%;
+  padding-top: 20%;
+  margin: 0 auto;
+  height: 100%;
+  margin-bottom: 42%;
+}
+.contenedor-form a {
+  margin-left: 15%;
+  font-weight: bold;
+}
+
+.col-card-1 {
+  display: inline-flex;
+  margin-left: 10%;
+  width: 100%;
+  text-align: center;
+  margin-right: 10%;
+}
+.col-card-1 p {
+  margin-left: 5%;
+  font-weight: bold;
+}
+.col-card-1 label {
+  padding-left: 10%;
+  width: 45%;
+}
+
+.row {
+  height: 30%;
+}
+
+.card-lista {
+  width: 22%;
+  margin-left: 2%;
+  margin-top: 2%;
+  border: 3px;
+  border-color: #000000;
+  box-shadow: 6px 10px 14px 6px #000000;
+  transition: 0.3s;
+  border-radius: 15px 15px 15px 15px;
+  -moz-border-radius: 15px 15px 15px 15px;
+  -webkit-border-radius: 15px 15px 15px 15px;
+  border: 1px solid #000000;
+  float: left;
+  background-color: #ffffff;
+}
+
+.card-lista-report {
+  width: 75%;
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-bottom: 15%;
+  border: 3px;
+  border-color: #000000;
+  box-shadow: 6px 10px 14px 6px #000000;
+  transition: 0.3s;
+  border-radius: 15px 15px 15px 15px;
+  -moz-border-radius: 15px 15px 15px 15px;
+  -webkit-border-radius: 15px 15px 15px 15px;
+  border: 1px solid #000000;
+  float: left;
+  background-color: #ffffff;
+  text-align: center;
+  padding-bottom: 2%;
+}
+.card-lista-report .form-group {
+  margin: 1% 5% 1% 5%;
+}
+
+.form-date {
+  width: 100%;
+  box-shadow: 0cm;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+}
+
+.input-button {
+  width: 20%;
+  height: 2.4em;
+  background-color: #007bff;
+  color: #ffffff;
+  box-shadow: 0cm;
+  border-radius: 14px 14px 14px 14px;
+  -moz-border-radius: 14px 14px 14px 14px;
+  -webkit-border-radius: 14px 14px 14px 14px;
+}
+
+.input-button-reset {
+  width: 20%;
+  height: 2.4em;
+  background-color: #fc0000;
+  color: #ffffff;
+  box-shadow: 0cm;
+  border-radius: 14px 14px 14px 14px;
+  -moz-border-radius: 14px 14px 14px 14px;
+  -webkit-border-radius: 14px 14px 14px 14px;
+}
+
+footer {
+  background: url("../img/fondo-tronco.jpg") fixed;
+  color: #ffffff;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 15%;
+  position: fixed;
+  margin-top: 1%;
+  display: inline-block;
+}
+@media only screen and (max-width: 0) {
+  footer div {
+    float: right;
+    margin-left: 10%;
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  footer div {
+    float: right;
+    margin-left: 15%;
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  footer div {
+    float: right;
+    margin-left: 25%;
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  footer div {
+    float: right;
+    margin-left: 25%;
+    width: 55%;
+  }
+  footer div h3 {
+    font-size: 95%;
+    font-weight: bold;
+  }
+  footer div p {
+    font-size: 80%;
+    font-weight: bold;
+    margin-left: 8%;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  footer div {
+    float: right;
+    margin-left: 25%;
+    width: 40%;
+  }
+  footer div h3 {
+    font-weight: bold;
+  }
+  footer div p {
+    margin-left: 8%;
+    font-weight: bold;
+  }
+}
+@media only screen and (max-width: 2000px) {
+  footer div {
+    float: right;
+    margin-left: 25%;
+    width: 40%;
+  }
+  footer div h3 {
+    font-weight: bold;
+  }
+  footer div p {
+    margin-left: 5%;
+    font-weight: bold;
+  }
+}
+@media only screen and (max-width: 0) {
+  footer .footer-colums {
+    float: left;
+    margin-left: 0%;
+    width: 25%;
+  }
+  footer .footer-colums p {
+    margin-top: 5%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  footer .footer-colums {
+    float: left;
+    margin-left: 0%;
+    width: 25%;
+  }
+  footer .footer-colums p {
+    margin-top: 5%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  footer .footer-colums {
+    float: left;
+    margin-left: 0%;
+    width: 25%;
+  }
+  footer .footer-colums p {
+    margin-top: 5%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  footer .footer-colums {
+    float: left;
+    margin-left: 0%;
+    width: 20%;
+    font-size: 90%;
+  }
+  footer .footer-colums p {
+    margin-top: 5%;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  footer .footer-colums {
+    float: left;
+    margin-left: 0%;
+    width: 35%;
+  }
+  footer .footer-colums p {
+    margin-top: 5%;
+  }
+}
+@media only screen and (max-width: 2000px) {
+  footer .footer-colums {
+    float: left;
+    margin-left: 5%;
+    width: 25%;
+  }
+  footer .footer-colums p {
+    margin-top: 1%;
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: url("../img/fondo-hojas.jpg") no-repeat fixed;
+  height: 30%;
+}
+nav .usuario-icono {
+  width: 85%;
+  height: 63%;
+  right: 0;
+}
+nav .usuario-icono img {
+  height: 20%;
+  vertical-align: middle;
+  border-style: none;
+  width: 51%;
+}
+nav .usuario-icono p {
+  font-weight: bolder;
+  width: 62%;
+  float: right;
+  margin-top: 5%;
+  margin-right: -14%;
+  font-size: 150%;
+}
+@media only screen and (min-width: 0) {
+  nav .btn-nav {
+    position: relative;
+    padding-left: 40%;
+    padding-top: 1%;
+  }
+}
+@media only screen and (min-width: 540px) {
+  nav .btn-nav {
+    position: relative;
+    padding-left: 50%;
+    padding-top: 1%;
+  }
+}
+@media only screen and (min-width: 720px) {
+  nav .btn-nav {
+    position: relative;
+    padding-left: 60%;
+    padding-top: 1%;
+  }
+}
+@media only screen and (min-width: 960px) {
+  nav .btn-nav {
+    position: relative;
+    padding-left: 60%;
+    padding-top: 1%;
+  }
+}
+@media only screen and (min-width: 1140px) {
+  nav .btn-nav {
+    position: relative;
+    padding-left: 65%;
+    padding-top: 1%;
+  }
+}
+nav .btn-nav .dropdown {
+  float: left;
+  margin-left: 2%;
+}
+nav button {
+  background-color: transparent;
+  color: #000000;
+  font-weight: bold;
+  box-shadow: 0cm;
+  border-radius: 15px 15px 15px 15px;
+  -moz-border-radius: 15px 15px 15px 15px;
+  -webkit-border-radius: 15px 15px 15px 15px;
+  align-content: flex-end;
+}
+nav .menu-transparente {
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: bold;
+}
+nav .menu-transparente a {
+  color: #000000;
+  font-weight: bold;
+}
+
+body {
+  background: url("../img/fondo-contenido.jpg") fixed;
+  height: 100%;
+}
+
+.alert {
+  color: #fc0000;
+  font-weight: bold;
+  font-size: 90%;
+}
+
+.login-nav {
+  right: 0;
+  margin-top: 15%;
+  margin-right: 5%;
+  font-size: 115%;
+  font-weight: bolder;
+  color: #ffffff;
+  float: right;
+}
+
+.logout-class {
+  font-size: 75%;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=baseStyle.css.map */

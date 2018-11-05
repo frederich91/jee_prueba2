@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+
+{% block contenido %}
+<div class="contenedor-form">
+<form action="/reporte/tipo" method="POST">
+    <p>Seleccione tipo a filtrar</p>
+    <div class="form-group">
+    	<label for="cboTipo">Tipo</label> <select class="form-control"
+    		id="cboTipo" name="cboTipo" placeholder="Seleccione Tipo" required>
+    		<option value="0">Seleccione Tipo</option>
+    		{% for tipo in tipos %}
+    		<option value="{{ tipo.getId()}}">{{ tipo.getDesc() }}</option>
+    		{% endfor %}
+    	</select>
+    </div>
+    <input class="input-button" type="submit" value="Buscar" /> 
+</form>
+{% if animales %}
+    <div class="card-lista-report">
+    	<h4>Reporte Animales por Tipo</h4>
+    	<table class="table">
+    		<tr>
+    			<th>Nombre</th>
+    			<th>Peso</th>
+    			<th>Fecha nacimiento</th>
+    			<th>Fecha de ingreso</th>
+    			<th>Fecha de muerte</th>
+    			<th>Genero</th>
+    			<th>Tipo</th>
+    			<th>Sector</th>
+    
+    		</tr>
+    
+    		{% for a in animales %}
+    
+    		<tr>
+    			<td>{{ a.getNombre() }}</td>
+    			<td>{{ a.getPeso()  }}</td>
+    			<td>{{ a.getFchNac() }}</td>
+    			<td>{{ a.getFchIngreso() }}</td>
+    			<td>{{ a.getFchMuerte() }}</td>
+    			<td>{{ a.getPeso() }}</td>
+    			<td>{{ a.getTipo().getDesc() }}</td>
+    			<td>{{ a.getSector().getDesc() }}</td>
+    		</tr>
+    
+    		{% endfor %}
+    
+    
+    	</table>
+   {% endif %}
+    	<h4>
+    		{{ mensaje }}
+    	</h4>
+    </div>
+</div>
+{% endblock contenido %}

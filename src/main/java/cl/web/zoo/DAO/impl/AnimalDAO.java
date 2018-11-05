@@ -29,8 +29,8 @@ public class AnimalDAO {
   public List<Animal> filterByTipo(Tipo tipo) {
 
     String hql = "select a from Animal a where a.tipo= :tipo";
-
-    return (List<Animal>) entityManager.createQuery(hql, Animal.class).setParameter("tipo", tipo).getResultList();
+    List<Animal> animales = entityManager.createQuery(hql, Animal.class).setParameter("tipo", tipo).getResultList();
+    return animales;
   }
   
   
